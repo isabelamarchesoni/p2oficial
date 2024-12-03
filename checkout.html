@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400..700&family=Fascinate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400..700&family=Fascinate&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/checkout.css">
+    <title>Check-Out</title>
+</head>
+<body> 
+  <nav class="navbar navbar-expand-lg cor-bege"> 
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"> 
+        <img src="img/LogoRed.svg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        <span class="font-header">Vintage's</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active text-dark" aria-current="page" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-dark" aria-current="page" href="home.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-dark" aria-current="page" href="login.html">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-dark" aria-current="page" href="home.html">Contato</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <p class="mb-0 me-3">Isabela Marchesoni</p>
+          <button type="button" class="btn btn-danger ms-1 border-0" onclick="irparahome(); return false;">
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+      
+  <div class="d-flex min-vh-100 justify-content-center align-items-center">
+    <div class="container-sm text-center form-custom-email">
+        <form class="row g-3">
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Endereço</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="Rua Exemplo, 123">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Endereço Secundário</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Rua Exemplo, 123">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">Cidade</label>
+              <input type="text" class="form-control" id="inputCity" placeholder="Insira sua cidade">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">Estado</label>
+              <select id="inputState" class="form-select">
+                <option selected>Clique Para Escolher</option>
+                <option>Acre</option>
+                <option>Alagoas</option>
+                <option>Amapá</option>
+                <option>Amazonas</option>
+                <option>Bahia</option>
+                <option>Ceará</option>
+                <option>Espírito Santo</option>
+                <option>Maranhão</option>
+                <option>Mato Grosso</option>
+                <option>Mato Grosso do Sul</option>
+                <option>Minas Gerais</option>
+                <option>Pará</option>
+                <option>Paraíba</option>
+                <option>Paraná</option>
+                <option>Pernambuco</option>
+                <option>Rio de Janeiro</option>
+                <option>Rio Grande do Norte</option>
+                <option>Rio Grande do Sul</option>
+                <option>Rondônia</option>
+                <option>Roraima</option>
+                <option>Santa Catarina</option>
+                <option>São Paulo</option>
+                <option>Sergipe</option>
+                <option>Tocantins</option>
+                <option>Distrito Federal</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">CEP</label>
+              <input type="text" class="form-control" id="inputZip" placeholder="xxxxxxxx">
+            </div>
+            <div class="mb-2 col-12 mx-auto">
+                <label class="d-block text-start">
+                    <input type="radio" name="payment" value="credit_card" required class="me-2">
+                    Cartão de Crédito
+                </label>
+                <label class="d-block text-start">
+                    <input type="radio" name="payment" value="debit_card" required class="me-2">
+                    Cartão de Débito
+                </label>
+                <label class="d-block text-start">
+                    <input type="radio" name="payment" value="boleto" required class="me-2">
+                    Boleto
+                </label>
+                <label class="d-block text-start">
+                    <input type="radio" name="payment" value="pix" required class="me-2">
+                    Pix
+                </label>
+            </div>
+            <div class="mb-3 col-12 col-md-8 mx-auto">
+                <button type="submit" onclick="irparaprodutos(); return false" class="btn btn-primary w-100">Finalizar Compra</button>
+            </div>
+          </form>
+    </div>
+</div>
+
+<footer class="cor-bege text-dark py-4">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4">
+        <h3>Redes Sociais</h3>
+
+        <a href="https://wa.me/5513123456789/?text=Tenho interesse em comprar um Vinil!" target="_blank">
+          <img src="img/Whatsapp.png" alt="Logo Whatsapp" width="25" height="25">
+        </a>
+ 
+        <a href="https://facebook.com" target="_blank">
+          <img src="img/Facebook.png"alt="Logo Facebook" width="25" height="25">
+        </a>
+ 
+        <a href="https://instagram.com" target="_blank">
+          <img src="img/Instagram.png"alt="Logo Instagram" width="25" height="25">
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <h3>Navegação</h3>
+        <p><a href="home.html" class="text-black">Home</a></p>
+        <p><a href="home.html" class="text-black">Sobre</a></p>
+        <p><a href="login.html" class="text-black">Produtos</a></p>
+        <p><a href="home.html" class="text-black">Contato</a></p>
+      </div>
+
+      <div class="col-md-4">
+        <h3>Informações da Loja</h3>
+        <p><img src="img/location.png"alt="Localização" width="25" height="25"> Rua Exemplo, 123, Praia Grande, SP</p>
+        <p><img src="img/phone.png" alt="Telefone" width="25" height="25"> 1234-5678</p>
+        <p><img src="img/envelope.png" alt="Email" width="25" height="25"> contato@exemplo.com</p>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <p class="mb-0">&copy; 2024 Todos os direitos reservados a Isabela Marchesoni e Breno Farias</p> 
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="script/comandos.js"></script>
+</body>
+</html>
